@@ -13,6 +13,16 @@ from subgrounds.subgraph import SyntheticField
 st.set_page_config(page_icon="👻", page_title="aave test 2")
 st.title(" AAVE dashboard")
 
+st.subheader("AAVE introduction")
+st.write("AAVE is decentralized lending and borrowing protocol. It essentially allows users to lend or borrow digital assets and earn/pay interst on them.")
+st.write("AAVEv3 was recently launched in march 2022. Since then it has been deployed on various L2s and chains such as Optimism,Polygon,Fantom,Avalanche and Arbitrum")
+
+st.subheader("METHODOLOGY")
+st.write("In this dashboard, we will be looking at the varying lending rates on the various chains on which AAVEv3 is available. ")
+
+
+
+
 # 0 means optimism, 1 means polygon,2 means harmony, 3 is fantom, 4 is avalanche and 5 is arbitrum
 #in hindsight,i should've used a dictionary but i am not typing all that stuff now
 DAI = ('0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1','0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063','one1a7th6tunrsvh3k6lvarkvmapat9s6qee9kna05','0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E','0xd586E7F844cEa2F87f50152665BCbc2C279D8d70','0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1')
