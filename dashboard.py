@@ -257,13 +257,16 @@ plot.update_layout(
 )
 st.plotly_chart(plot)
 
-st.write("it appears that lending rates were very high on various chains at the start of the protocol, this was probably because the protocol was still new and there were less liquidity providers.")
+st.write("it appears that lending rates were very high on various chains at the start of the protocol, this was probably because the protocol was still new and there were less lenders.")
 st.write("Fantom had a temporary strong spike in the beggining but the rate seems to have falllen off. The same is true for Avalanche. It appears that ETH L2 are giving better rates now.")
-st.write("Optimism seems to be giving the best lending rate for although arbitrum catching up. Optimism is still very ahead of arbitrum because it also offers additional OP tokens to it's lenders")
+st.write("Optimism seems to be giving the best lending rate since the start of August, although arbitrum is catching up. Optimism is still very ahead of arbitrum because it also offers additional OP tokens to its lenders")
 
 lnk = pd.read_csv('link.csv')
 et = pd.read_csv('eth.csv')
 di = pd.read_csv('data.csv')
+
+st.subheader("Measuring yield of a portfolio")
+st.write("I have chosen a portfolio containing - LINK,ETH and DAI. It is assumed that i have equal amounts(in USD) of the three token. Hence, the lending rate is calculated adding the three lending rates and dividing the addition by three.")
 
 portop1 = lnk['Optimism_rate'].add(et['Optimism_rate'],fill_value=0)
 portop2 = (di['Optimism_rate'].add(portop1,fill_value=0))/3
