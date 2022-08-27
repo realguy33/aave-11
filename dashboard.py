@@ -233,6 +233,10 @@ elif(update == True):
 
 
 plot = px.line(chart,x='marketDailySnapshots_datetime',y=['Arbitrum_rate','Avalanche_rate','Fantom_rate','polygon_rate','Optimism_rate'])
+plot.update_layout(
+    xaxis_title="date",
+    yaxis_title="volume",
+)
 st.plotly_chart(plot)
 
 
