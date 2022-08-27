@@ -11,6 +11,7 @@ from subgrounds.subgraph import SyntheticField
 
 
 st.set_page_config(page_icon="👻", page_title="aave test 2")
+st.image('./aave.png')
 st.title(" AAVE dashboard")
 
 st.subheader("AAVE introduction")
