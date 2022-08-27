@@ -25,6 +25,8 @@ st.subheader("Sources-")
 st.write("This dashboard was made with the help of Messari's subgraph and subgrounds library. Proper sources as well as a link to the github repository has been provided at the end of this dashboard")
 st.subheader("Lending rate analysis of a coin")
 st.write("DAI has been select as the default for this analysis but you can select another coin of your choice from the selction")
+st.write("Note - you can run your query by clicking on the Update data button but the query can take upto 5-10 minutes to finish so please be patient")
+
 
 
 
