@@ -237,7 +237,37 @@ st.plotly_chart(plot)
 
 
 
+lnk = pd.read_csv('link.csv')
+et = pd.read_csv('eth.csv')
+di = pd.read_csv('data.csv')
 
+portop1 = lnk['Optimism_rate'].add(et['Optimism_rate'],fill_value=0)
+portop2 = (di['Optimism_rate'].add(portop1,fill_value=0))/3
+
+
+portpol1 = lnk['polygon_rate'].add(et['polygon_rate'],fill_value=0)
+portpol2 = (di['polygon_rate'].add(portpol1,fill_value=0))/3
+
+portfan1 = lnk['Fantom_rate'].add(et['Fantom_rate'],fill_value=0)
+portfan2 = (di['Fantom_rate'].add(portfan1,fill_value=0))/3
+
+portava1 = lnk['Avalanche_rate'].add(et['Avalanche_rate'],fill_value=0)
+portava2 = (di['Avalanche_rate'].add(portava1,fill_value=0))/3
+
+portarb1 = lnk['Arbitrum_rate'].add(et['Arbitrum_rate'],fill_value=0)
+portarb2 = (di['Arbitrum_rate'].add(portarb1,fill_value=0))/3
+
+portop3 =  pd.concat([portop2,lnk['marketDailySnapshots_datetime']],axis = 1,)
+portpol3 =  pd.concat([portpol2,lnk['marketDailySnapshots_datetime']],axis = 1,)
+portfan3 =  pd.concat([portfan2,lnk['marketDailySnapshots_datetime']],axis = 1,)
+portava3 =  pd.concat([portava2,lnk['marketDailySnapshots_datetime']],axis = 1,)
+portarb3 =  pd.concat([portarb2,lnk['marketDailySnapshots_datetime']],axis = 1,)
+
+st.plotly_chart(px.line(portop3,y='Optimism_rate',x='marketDailySnapshots_datetime'))
+st.plotly_chart(px.line(portpol3,y='polygon_rate',x='marketDailySnapshots_datetime'))
+st.plotly_chart(px.line(portfan3,y='Fantom_rate',x='marketDailySnapshots_datetime'))
+st.plotly_chart(px.line(portava3,y='Avalanche_rate',x='marketDailySnapshots_datetime'))
+st.plotly_chart(px.line(portarb3,y='Arbitrum_rate',x='marketDailySnapshots_datetime'))
 
 
 
