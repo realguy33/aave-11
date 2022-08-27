@@ -15,12 +15,12 @@ st.image('aave.jpg')
 st.title(" AAVE dashboard")
 
 st.subheader("AAVE introduction")
-st.write("AAVE is decentralized lending and borrowing protocol. It essentially allows users to lend or borrow digital assets and earn/pay interst on them. Many lenders users use AAVE as an alternative to a simple savings account which is why users might be interested in knowing which chain gives them the overall best yield")
+st.write("AAVE is decentralized lending and borrowing protocol. It essentially allows users to lend or borrow digital assets and earn/pay interst on them. Many lenders users use AAVE as an alternative to a simple savings account which is why users might be interested in knowing which chain gives them the overall best yield. The lending rate in AAVE is  variable which is why one may want to look at the historical rates available at different chains to determine which might be the best chain to use for lending purposes")
 st.write("AAVEv3 was recently launched in march 2022. Since then it has been deployed on various L2s and chains such as Optimism,Polygon,Fantom,Avalanche and Arbitrum")
 
 st.subheader("METHODOLOGY")
 st.write("In this dashboard, we will be looking at the varying lending rates on the various chains on which AAVEv3 is available. We will be lookimg at a variety of tokens that are available on all the chains. We will also look at the perfomance of a portfolio containing - LINK,ETH AND DAI. Extra reward tokens have been excluded from this analysis for the sake of simplicity")
-st.write(" Harmony has been  excluded from this analysis becuase of the horizon bridge exploit.")
+st.write(" Harmony has been  excluded from this analysis becuase of the horizon bridge exploit which was leading to inaccurate data.")
 st.subheader("Sources-")
 st.write("This dashboard was made with the help of Messari's subgraph and subgrounds library. Proper sources as well as a link to the github repository has been provided at the end of this dashboard")
 st.subheader("Lending rate analysis of a coin")
@@ -257,7 +257,9 @@ plot.update_layout(
 )
 st.plotly_chart(plot)
 
-
+st.write("it appears that lending rates were very high on various chains at the start of the protocol, this was probably because the protocol was still new and there were less liquidity providers.")
+st.write("Fantom had a temporary strong spike in the beggining but the rate seems to have falllen off. The same is true for Avalanche. It appears that ETH L2 are giving better rates now.")
+st.write("Optimism seems to be giving the best lending rate for although arbitrum catching up. Optimism is still very ahead of arbitrum because it also offers additional OP tokens to it's lenders")
 
 lnk = pd.read_csv('link.csv')
 et = pd.read_csv('eth.csv')
