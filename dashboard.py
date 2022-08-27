@@ -322,7 +322,7 @@ st.write("5- Fantom seems to be doing the worst")
 st.write("Main Conclusion -lending on optimism seems to be available option for now")
 
 st.subheader("Proper Sources")
-st.write("subgrpahs - from messari(subgraphs.xyz))
+st.write("subgrpahs - from messari(subgraphs.xyz)")
 st.write("github repo - https://github.com/realguy33/aave-11")         
 
 
