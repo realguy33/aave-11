@@ -202,7 +202,7 @@ def arbfunc(value):
 update = st.button('Update data')
 
 if(update == False):
-    chart = pd.read_csv("c:/Users/hp/Desktop/analysiswork/aavebounties/bounty11/data.csv")
+    chart = pd.read_csv("data.csv")
 elif(update == True):
     plotop = pd.DataFrame()
     plotpol = pd.DataFrame()
