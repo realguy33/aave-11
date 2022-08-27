@@ -267,20 +267,23 @@ di = pd.read_csv('data.csv')
 
 st.subheader("Measuring yield of a portfolio")
 st.write("I have chosen a portfolio containing - LINK,ETH and DAI. It is assumed that i have equal amounts(in USD) of the three token. Hence, the lending rate is calculated adding the three lending rates and dividing the addition by three.")
-
+st.subheader("Optimism")
 portop1 = lnk['Optimism_rate'].add(et['Optimism_rate'],fill_value=0)
 portop2 = (di['Optimism_rate'].add(portop1,fill_value=0))/3
 
-
+st.subheader("Polygon")
 portpol1 = lnk['polygon_rate'].add(et['polygon_rate'],fill_value=0)
 portpol2 = (di['polygon_rate'].add(portpol1,fill_value=0))/3
 
+st.subheader("Fantom-")
 portfan1 = lnk['Fantom_rate'].add(et['Fantom_rate'],fill_value=0)
 portfan2 = (di['Fantom_rate'].add(portfan1,fill_value=0))/3
 
+st.subheader("Avalanche-")
 portava1 = lnk['Avalanche_rate'].add(et['Avalanche_rate'],fill_value=0)
 portava2 = (di['Avalanche_rate'].add(portava1,fill_value=0))/3
 
+st.subheader("Arbitrum-")
 portarb1 = lnk['Arbitrum_rate'].add(et['Arbitrum_rate'],fill_value=0)
 portarb2 = (di['Arbitrum_rate'].add(portarb1,fill_value=0))/3
 
