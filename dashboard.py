@@ -312,6 +312,19 @@ st.subheader("Arbitrum-")
 
 st.plotly_chart(px.line(portarb3,y='Arbitrum_rate',x='marketDailySnapshots_datetime'))
 
+st.subheader("CONCLUSION")
+st.write("1-As of this month, Optimism seems to be the performing chain for lending DAI")
+st.write("2-The yields of Eth-killers were high intitially but these chains seem to performing worsen as of recently")
+st.write("3- Optimism seems to be performing better even if we consider a portfolio of tokens")
+st.write("4- arbitrum is the second best as of now")
+st.write("5- Fantom seems to be doing the worst")
+
+st.write("Main Conclusion -lending on optimism seems to be available option for now")
+
+st.subheader("Proper Sources")
+st.write("subgrpahs - from messari(subgraphs.xyz))
+st.write("github repo - https://github.com/realguy33/aave-11")         
+
 
 
 
