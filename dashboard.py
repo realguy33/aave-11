@@ -66,7 +66,7 @@ def optfunc(value):
 
     marketD = aop.Query.marketDailySnapshots(
     where =[aop.MarketDailySnapshot.market == value.lower()],
-    first = 5,
+    first = 365,
     orderBy = aop.MarketDailySnapshot.timestamp,
     orderDirection = 'desc'
     )
@@ -90,7 +90,7 @@ def polfunc(value):
 
     marketD = apol.Query.marketDailySnapshots(
     where =[apol.MarketDailySnapshot.market == value.lower()],
-    first = 5,
+    first = 365,
     orderBy = apol.MarketDailySnapshot.timestamp,
     orderDirection = 'desc'
     )
@@ -114,7 +114,7 @@ def harfunc(value):
 
     marketD = ahar.Query.marketDailySnapshots(
     where =[ahar.MarketDailySnapshot.market == value.lower()],
-    first = 5,
+    first = 365,
     orderBy = ahar.MarketDailySnapshot.timestamp,
     orderDirection = 'desc'
     )
@@ -138,7 +138,7 @@ def fanfunc(value):
 
     marketD = afan.Query.marketDailySnapshots(
     where =[afan.MarketDailySnapshot.market == value.lower()],
-    first = 5,
+    first = 365,
     orderBy = afan.MarketDailySnapshot.timestamp,
     orderDirection = 'desc'
     )
@@ -162,7 +162,7 @@ def avafunc(value):
 
     marketD = aava.Query.marketDailySnapshots(
     where =[aava.MarketDailySnapshot.market == value.lower()],
-    first = 5,
+    first = 365,
     orderBy = aava.MarketDailySnapshot.timestamp,
     orderDirection = 'desc'
     )
@@ -185,7 +185,7 @@ def arbfunc(value):
 
     marketD = aarb.Query.marketDailySnapshots(
     where =[aarb.MarketDailySnapshot.market == value.lower()],
-    first = 5,
+    first = 365,
     orderBy = aarb.MarketDailySnapshot.timestamp,
     orderDirection = 'desc'
     )
