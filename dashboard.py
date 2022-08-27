@@ -281,30 +281,35 @@ portava2 = (di['Avalanche_rate'].add(portava1,fill_value=0))/3
 
 portarb1 = lnk['Arbitrum_rate'].add(et['Arbitrum_rate'],fill_value=0)
 portarb2 = (di['Arbitrum_rate'].add(portarb1,fill_value=0))/3
-st.subheader("Optimism")
 
 portop3 =  pd.concat([portop2,lnk['marketDailySnapshots_datetime']],axis = 1,)
 
-st.subheader("Polygon")
 
 portpol3 =  pd.concat([portpol2,lnk['marketDailySnapshots_datetime']],axis = 1,)
 
-st.subheader("Fantom-")
 
 portfan3 =  pd.concat([portfan2,lnk['marketDailySnapshots_datetime']],axis = 1,)
 
-st.subheader("Avalanche-")
 
 portava3 =  pd.concat([portava2,lnk['marketDailySnapshots_datetime']],axis = 1,)
 
-st.subheader("Arbitrum-")
 
 portarb3 =  pd.concat([portarb2,lnk['marketDailySnapshots_datetime']],axis = 1,)
+st.subheader("Optimism")
 
 st.plotly_chart(px.line(portop3,y='Optimism_rate',x='marketDailySnapshots_datetime'))
+st.subheader("Polygon")
+
 st.plotly_chart(px.line(portpol3,y='polygon_rate',x='marketDailySnapshots_datetime'))
+st.subheader("Fantom-")
+
 st.plotly_chart(px.line(portfan3,y='Fantom_rate',x='marketDailySnapshots_datetime'))
+st.subheader("Avalanche-")
+
 st.plotly_chart(px.line(portava3,y='Avalanche_rate',x='marketDailySnapshots_datetime'))
+
+st.subheader("Arbitrum-")
+
 st.plotly_chart(px.line(portarb3,y='Arbitrum_rate',x='marketDailySnapshots_datetime'))
 
 
