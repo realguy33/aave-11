@@ -18,7 +18,11 @@ st.write("AAVE is decentralized lending and borrowing protocol. It essentially a
 st.write("AAVEv3 was recently launched in march 2022. Since then it has been deployed on various L2s and chains such as Optimism,Polygon,Fantom,Avalanche and Arbitrum")
 
 st.subheader("METHODOLOGY")
-st.write("In this dashboard, we will be looking at the varying lending rates on the various chains on which AAVEv3 is available. ")
+st.write("In this dashboard, we will be looking at the varying lending rates on the various chains on which AAVEv3 is available. We will be lookimg at a variety of tokens that are available on all the chains. We will also look at the perfomance of a portfolio containing - LINK,ETH AND DAI")
+st.write(" Harmony has been  excluded from this analysis becuase of the horizon bridge exploit.")
+st.subheader("Sources-")
+st.write("This dashboard was made with the help of Messari's subgraph and subgrounds library. Proper sources as well as a link to the github repository has been provided at the end of this dashboard")
+
 
 
 
