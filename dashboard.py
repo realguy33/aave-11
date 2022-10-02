@@ -10,7 +10,7 @@ from datetime import datetime
 from subgrounds.subgraph import SyntheticField
 
 
-st.set_page_config(page_icon="👻", page_title="aave test 2")
+st.set_page_config(page_icon="👻", page_title="aave Dashboard")
 st.image('aave.jpg')
 st.title(" AAVE dashboard")
 
